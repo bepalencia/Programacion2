@@ -5,6 +5,8 @@ import com.uce.funciones.CalculadoraIMC;
 import com.uce.funciones.ClaseEstatica;
 import com.uce.funciones.Implementacion;
 import com.uce.objetos.Alumno;
+import com.uce.objetos.AlumnoInmutable;
+import com.uce.objetos.AlumnoRecord;
 import com.uce.objetos.Persona;
 
 public class Main {
@@ -62,16 +64,38 @@ public class Main {
     
     System.out.println(ClaseEstatica.atributoEstatico);*/
    
-    Calculadora s1 = new Calculadora();
+   /*  Calculadora s1 = new Calculadora();
 
     System.out.println(s1.sumar(5, 3));
     System.out.println(s1.restar(5, 3));
     System.out.println(s1.multiplicar(5, 3));
     System.out.println(s1.dividir(5, 3));
-    System.out.println(s1.factorial(5));
+    System.out.println(s1.factorial(5));*/
 
-    
-    
+    AlumnoInmutable alumnoInmutable = new AlumnoInmutable(
+        1723203145,
+        "Ana", 
+        20, 
+        170,
+        154);
+
+    System.out.println(alumnoInmutable.getNombre());
+
+    AlumnoRecord alumnoRecord1 = new AlumnoRecord(
+        1723203145,
+        "Ana", 
+        20, 
+        170,
+        154);
+
+    System.out.println(alumnoRecord1.nombre());
+
+    AlumnoRecord alumnoRecord2 = new AlumnoRecord(
+        alumnoRecord1.ci(),
+        "Ana Maria", 
+        alumnoRecord1.edad(), 
+        alumnoRecord1.estatura(),
+        alumnoRecord1.peso());
 
 
    
