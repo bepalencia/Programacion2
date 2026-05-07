@@ -8,6 +8,7 @@ import com.uce.objetos.Alumno;
 import com.uce.objetos.AlumnoInmutable;
 import com.uce.objetos.AlumnoRecord;
 import com.uce.objetos.Persona;
+import com.uce.objetos.Person;
 
 public class Main {
     public static void main(String[] args) {
@@ -71,7 +72,7 @@ public class Main {
     System.out.println(s1.multiplicar(5, 3));
     System.out.println(s1.dividir(5, 3));
     System.out.println(s1.factorial(5));*/
-
+/*
     AlumnoInmutable alumnoInmutable = new AlumnoInmutable(
         1723203145,
         "Ana", 
@@ -86,8 +87,8 @@ public class Main {
         "Ana", 
         20, 
         170,
-        154);
-
+        154);*/
+    /*
     System.out.println(alumnoRecord1.nombre());
 
     AlumnoRecord alumnoRecord2 = new AlumnoRecord(
@@ -95,18 +96,28 @@ public class Main {
         "Ana Maria", 
         alumnoRecord1.edad(), 
         alumnoRecord1.estatura(),
-        alumnoRecord1.peso());
+        alumnoRecord1.peso());*/
+
+        int number = 10; 
 
 
-   
+        Person person = new Person("Alice");
+        System.out.println("Before: "+person.name);
+        modifyPerson(person);
+        System.out.println("After: "+person.name);
 
-
-    
-    
-    
 
  }
  
+    public static void modifyPerson(Person p){
+        Person newPerson  = p;
+        newPerson.name = "Bob";
+
+    }
+
+
+
+
 }
 
 
